@@ -1,0 +1,12 @@
+{
+    "partnerCode": "MOMOBKUN20180529",
+    "orderId": "7a7dd911-ba02-43e1-97a8-69ad5a624822",
+    "requestId": "17e1c05f-c52d-4858-b934-56ae6be5eef9",
+    "amount": 700000,
+    "responseTime": 1647447361240,
+    "message": "Successful.",
+    "resultCode": 0,
+    "payUrl": "https://test-payment.momo.vn/v2/gateway/pay?t=TU9NT0JLVU4yMDE4MDUyOXw3YTdkZDkxMS1iYTAyLTQzZTEtOTdhOC02OWFkNWE2MjQ4MjI=",
+    "deeplink": "momo://?action=payWithAppToken&amount=700000&cardId=&cardType=&cashInId=&cashInIdPay=&comment=&createdAt=1647447361240&deeplinkCallback=&description=Some+order+Info&discountCampaignAmount=0&discountCode=&extra=&extraData=ew0KImVtYWlsIjogImh1b25neGRAZ21haWwuY29tIg0KfQ==&extras=&gatewayMerchantCode=MOMOBKUN20180529&gatewaySessionId=TU9NT0JLVU4yMDE4MDUyOXw3YTdkZDkxMS1iYTAyLTQzZTEtOTdhOC02OWFkNWE2MjQ4MjI=&gatewayVersion=3.0&giftIds=&isScanQR=false&language=en&merchantcode=MOMOBKUN20180529&merchantname=Tenrenf&merchantnamelabel=Nh%C3%A0+cung+c%E1%BA%A5p&moneylimitPerTrans=&orderId=7a7dd911-ba02-43e1-97a8-69ad5a624822&orderLabel=M%C3%A3+%C4%91%C6%A1n+h%C3%A0ng&partnerCode=MOMOBKUN20180529&partnerName=Tenrenf&pin=&prepaidIds=&requestId=17e1c05f-c52d-4858-b934-56ae6be5eef9&requestType=payment&serviceType=app&signature=e5bde4772b6ab1c02fe792c94ed82b44eaaa3476c4ae3e66372477489c00b6b7&storeId=MOMOBKUN20180529&storeName=Tenrenf&type=&urlSubmitToken=https%3A%2F%2Fmomo.vn",
+    "qrCodeUrl": "https://test-payment.momo.vn/v2/gateway/app?isScanQr=true&t=TU9NT0JLVU4yMDE4MDUyOXw3YTdkZDkxMS1iYTAyLTQzZTEtOTdhOC02OWFkNWE2MjQ4MjI="
+}

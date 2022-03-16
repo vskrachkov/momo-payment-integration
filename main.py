@@ -1,9 +1,11 @@
 import hashlib
 import hmac
+from traceback import print_tb
 import requests
 import uuid
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, Response
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -35,9 +37,33 @@ def index() -> str:
     response_class=RedirectResponse,
     status_code=303,
 )
-def checkout_page() -> str:
-    result = create_order("87345")
+def checkout_page(request: Request) -> str:
+    notify_url = request.url_for("ipn-endpoint")
+    print(notify_url)
+    result = create_order("2000", notify_url=notify_url)
     return result["payUrl"]
+
+
+class InstantPaymentNotification(BaseModel):
+    partnerCode: str
+    orderId: str
+    requestId: str
+    amount: str
+    orderInfo: str
+    orderType: str
+    transId: int
+    resultCode: int
+    message: str
+    payType: str
+    responseTime: int
+    extraData: str
+    signature: str
+
+
+@app.post("/result", name="ipn-endpoint", status_code=204)
+def ipn_endpoint(body: InstantPaymentNotification):
+    print(body)
+    return Response(status_code=204)
 
 
 def create_order(
